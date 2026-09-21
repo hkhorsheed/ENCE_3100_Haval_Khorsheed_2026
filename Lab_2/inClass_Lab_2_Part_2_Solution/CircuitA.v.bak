@@ -1,0 +1,12 @@
+module CircuitA(
+	input v0,
+	input v1,
+	input v2,
+	output o0,
+	output o1,
+	output o2
+);
+
+
+
+endmodule

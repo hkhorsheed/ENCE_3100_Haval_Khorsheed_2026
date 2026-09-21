@@ -1,0 +1,22 @@
+module main(
+	input [9:0] SW,
+	output [9:0] LEDR,
+	
+	input 	MAX10_CLK1_50,
+	output	[7:0]		HEX0,
+	output	[7:0]		HEX1,
+	output	[7:0]		HEX2,
+	output	[7:0]		HEX3,
+	output	[7:0]		HEX4,
+	output	[7:0]		HEX5
+);
+
+	// PART II
+	mux_2_1_8b MUX0(
+		.s(SW[0]),
+		.x(SW[7:0]),
+		.y(8'd170),
+		.m(LEDR[7:0])
+	);
+
+endmodule
