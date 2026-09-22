@@ -1,6 +1,6 @@
 Analysis & Synthesis report for main
-Thu Sep 17 00:04:21 2026
-Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Mon Sep 21 22:31:18 2026
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -14,53 +14,60 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "mux_2_1:M3"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "Seg7_Decoder:D7"
+ 10. Port Connectivity Checks: "BCDAdder:BA1"
+ 11. Port Connectivity Checks: "BCDAdder:BA0"
+ 12. Port Connectivity Checks: "Seg7_Decoder:D2"
+ 13. Port Connectivity Checks: "Seg7_Decoder:D1"
+ 14. Port Connectivity Checks: "CircuitB:CB"
+ 15. Port Connectivity Checks: "mux_2_1:M3"
+ 16. Port Connectivity Checks: "Seg7_Decoder:D0"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2025  Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera IP License Agreement, or other applicable license
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Altera and sold by Altera or its authorized distributors.  Please
-refer to the Altera Software License Subscription Agreements 
-on the Quartus Prime software download page.
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 17 00:04:21 2026           ;
-; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
-; Revision Name                      ; main                                            ;
-; Top-level Entity Name              ; main                                            ;
-; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 8                                               ;
-;     Total combinational functions  ; 8                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 69                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-; UFM blocks                         ; 0                                               ;
-; ADC blocks                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Sep 21 22:31:18 2026          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; main                                           ;
+; Top-level Entity Name              ; main                                           ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 24                                             ;
+;     Total combinational functions  ; 24                                             ;
+;     Dedicated logic registers      ; 0                                              ;
+; Total registers                    ; 0                                              ;
+; Total pins                         ; 69                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -155,7 +162,7 @@ on the Quartus Prime software download page.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -165,18 +172,20 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File        ; C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v         ;         ;
-; mux_2_1.v                        ; yes             ; User Verilog HDL File        ; C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/mux_2_1.v      ;         ;
-; Seg7_Decoder.v                   ; yes             ; User Verilog HDL File        ; C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/Seg7_Decoder.v ;         ;
-; CircuitA.v                       ; yes             ; User Verilog HDL File        ; C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/CircuitA.v     ;         ;
-; comparator.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/comparator.v   ;         ;
-; circuitb.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/circuitb.v     ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v         ;         ;
+; mux_2_1.v                        ; yes             ; User Verilog HDL File        ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/mux_2_1.v      ;         ;
+; Seg7_Decoder.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/Seg7_Decoder.v ;         ;
+; CircuitA.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/CircuitA.v     ;         ;
+; FullAdder.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/FullAdder.v    ;         ;
+; BCDAdder.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/BCDAdder.v     ;         ;
+; comparator.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/comparator.v   ;         ;
+; circuitb.v                       ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/circuitb.v     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -184,16 +193,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 8           ;
+; Estimated Total logic elements              ; 24          ;
 ;                                             ;             ;
-; Total combinational functions               ; 8           ;
+; Total combinational functions               ; 24          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 7           ;
-;     -- 3 input functions                    ; 1           ;
+;     -- 4 input functions                    ; 9           ;
+;     -- 3 input functions                    ; 15          ;
 ;     -- <=2 input functions                  ; 0           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 8           ;
+;     -- normal mode                          ; 24          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -204,10 +213,10 @@ on the Quartus Prime software download page.
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; SW[2]~input ;
-; Maximum fan-out                             ; 8           ;
-; Total fan-out                               ; 111         ;
-; Average fan-out                             ; 0.76        ;
+; Maximum fan-out node                        ; SW[5]~input ;
+; Maximum fan-out                             ; 10          ;
+; Total fan-out                               ; 170         ;
+; Average fan-out                             ; 1.05        ;
 +---------------------------------------------+-------------+
 
 
@@ -216,9 +225,13 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+--------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name   ; Entity Name  ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+--------------+--------------+
-; |main                      ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 69   ; 0            ; 0          ; |main                 ; main         ; work         ;
-;    |Comparator:myC|        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Comparator:myC  ; Comparator   ; work         ;
-;    |Seg7_Decoder:D0|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Decoder:D0 ; Seg7_Decoder ; work         ;
+; |main                      ; 24 (2)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 69   ; 0            ; 0          ; |main                 ; main         ; work         ;
+;    |FullAdder:FA0|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FullAdder:FA0   ; FullAdder    ; work         ;
+;    |FullAdder:FA1|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FullAdder:FA1   ; FullAdder    ; work         ;
+;    |FullAdder:FA2|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FullAdder:FA2   ; FullAdder    ; work         ;
+;    |FullAdder:FA3|         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|FullAdder:FA3   ; FullAdder    ; work         ;
+;    |Seg7_Decoder:D3|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Decoder:D3 ; Seg7_Decoder ; work         ;
+;    |Seg7_Decoder:D4|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Decoder:D4 ; Seg7_Decoder ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -238,6 +251,73 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++---------------------------------------------+
+; Port Connectivity Checks: "Seg7_Decoder:D7" ;
++---------+-------+----------+----------------+
+; Port    ; Type  ; Severity ; Details        ;
++---------+-------+----------+----------------+
+; m[3..1] ; Input ; Info     ; Stuck at GND   ;
++---------+-------+----------+----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "BCDAdder:BA1"  ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; A[3]    ; Input ; Info     ; Stuck at GND ;
+; A[2]    ; Input ; Info     ; Stuck at VCC ;
+; A[1]    ; Input ; Info     ; Stuck at GND ;
+; A[0]    ; Input ; Info     ; Stuck at VCC ;
+; B[3..2] ; Input ; Info     ; Stuck at GND ;
+; B[1]    ; Input ; Info     ; Stuck at VCC ;
+; B[0]    ; Input ; Info     ; Stuck at GND ;
++---------+-------+----------+--------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "BCDAdder:BA0"  ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; A[2..1] ; Input ; Info     ; Stuck at GND ;
+; A[3]    ; Input ; Info     ; Stuck at VCC ;
+; A[0]    ; Input ; Info     ; Stuck at VCC ;
+; B[1..0] ; Input ; Info     ; Stuck at GND ;
+; B[3]    ; Input ; Info     ; Stuck at GND ;
+; B[2]    ; Input ; Info     ; Stuck at VCC ;
+; cin     ; Input ; Info     ; Stuck at GND ;
++---------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seg7_Decoder:D2"                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; m[3..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; out     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seg7_Decoder:D1"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CircuitB:CB"                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------+
 ; Port Connectivity Checks: "mux_2_1:M3" ;
 +------+-------+----------+--------------+
@@ -247,21 +327,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+--------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Seg7_Decoder:D0"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 69                          ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     normal            ; 12                          ;
+; cycloneiii_lcell_comb ; 30                          ;
+;     normal            ; 30                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
+;         1 data inputs ; 4                           ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 9                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.38                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -279,85 +368,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Thu Sep 17 00:04:14 2026
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Mon Sep 21 22:31:09 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 1
+    Info (12023): Found entity 1: main File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
-    Info (12023): Found entity 1: mux_2_1 File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/mux_2_1.v Line: 1
+    Info (12023): Found entity 1: mux_2_1 File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/mux_2_1.v Line: 1
 Warning (12019): Can't analyze file -- file mux_2_1_8b.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file seg7_decoder.v
-    Info (12023): Found entity 1: Seg7_Decoder File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/Seg7_Decoder.v Line: 1
+    Info (12023): Found entity 1: Seg7_Decoder File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/Seg7_Decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuita.v
-    Info (12023): Found entity 1: CircuitA File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/CircuitA.v Line: 1
+    Info (12023): Found entity 1: CircuitA File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/CircuitA.v Line: 1
 Warning (12019): Can't analyze file -- file output_files/Comparator.v is missing
 Warning (12019): Can't analyze file -- file output_files/CircuitB.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file fulladder.v
+    Info (12023): Found entity 1: FullAdder File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/FullAdder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcdadder.v
+    Info (12023): Found entity 1: BCDAdder File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/BCDAdder.v Line: 1
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "LEDR" at main.v(3) has no driver File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-Warning (10034): Output port "HEX2" at main.v(8) has no driver File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-Warning (10034): Output port "HEX3" at main.v(9) has no driver File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-Warning (10034): Output port "HEX4" at main.v(10) has no driver File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-Warning (10034): Output port "HEX5" at main.v(12) has no driver File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-Info (12128): Elaborating entity "Seg7_Decoder" for hierarchy "Seg7_Decoder:D0" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 24
-Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:M0" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 37
-Info (12128): Elaborating entity "CircuitA" for hierarchy "CircuitA:CA" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 64
+Warning (10034): Output port "LEDR[8..5]" at main.v(3) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 3
+Warning (10034): Output port "HEX3" at main.v(9) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+Info (12128): Elaborating entity "Seg7_Decoder" for hierarchy "Seg7_Decoder:D0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 26
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "mux_2_1:M0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 39
+Info (12128): Elaborating entity "CircuitA" for hierarchy "CircuitA:CA" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 66
 Warning (12125): Using design file comparator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Comparator File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/comparator.v Line: 1
-Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:myC" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 70
+    Info (12023): Found entity 1: Comparator File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/comparator.v Line: 1
+Info (12128): Elaborating entity "Comparator" for hierarchy "Comparator:myC" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 72
 Warning (12125): Using design file circuitb.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: CircuitB File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/circuitb.v Line: 1
-Info (12128): Elaborating entity "CircuitB" for hierarchy "CircuitB:CB" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 76
+    Info (12023): Found entity 1: CircuitB File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/circuitb.v Line: 1
+Info (12128): Elaborating entity "CircuitB" for hierarchy "CircuitB:CB" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 78
+Info (12128): Elaborating entity "FullAdder" for hierarchy "FullAdder:FA0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 100
+Info (12128): Elaborating entity "BCDAdder" for hierarchy "BCDAdder:BA0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 198
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 3
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 6
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 7
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 7
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 7
-    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 7
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 8
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 9
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 10
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
-    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 12
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 3
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 3
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 3
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 3
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 6
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 7
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 8
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 9
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 10
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_Golden_Top was ignored
@@ -571,22 +654,17 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- en
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 2
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 2
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 2
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 2
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 2
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 2
-    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Goncalo/DU/Classes/2026_44_Fall_Quarter/ENCE_3100_4110_Advance_Digital_Design/Labs/Lab_2_/inClass_Lab_2_Solutions/main.v Line: 5
-Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 2
+    Warning (15610): No output dependent on input pin "MAX10_CLK1_50" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/main.v Line: 5
+Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 277 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Thu Sep 17 00:04:21 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 260 warnings
+    Info: Peak virtual memory: 4757 megabytes
+    Info: Processing ended: Mon Sep 21 22:31:18 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 
