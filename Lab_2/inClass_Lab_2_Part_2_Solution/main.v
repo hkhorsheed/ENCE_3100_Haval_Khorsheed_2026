@@ -227,5 +227,5 @@ module main(
 	Seg7_Decoder D7(
 		.m({3'b000, part5_S2}),
 		.out(HEX2)
-	);
+	); 
 endmodule

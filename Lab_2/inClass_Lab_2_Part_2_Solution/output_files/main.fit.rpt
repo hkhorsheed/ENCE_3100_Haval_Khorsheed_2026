@@ -1,5 +1,5 @@
 Fitter report for main
-Mon Sep 21 22:31:26 2026
+Wed Sep 23 12:44:33 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Sep 21 22:31:26 2026          ;
+; Fitter Status                      ; Successful - Wed Sep 23 12:44:33 2026          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; main                                           ;
 ; Top-level Entity Name              ; main                                           ;
@@ -2115,7 +2115,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.10 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2124,9 +2124,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_2/inClass_Lab_2_Part_2_Solution/output_files/main.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 291 warnings
-    Info: Peak virtual memory: 5623 megabytes
-    Info: Processing ended: Mon Sep 21 22:31:26 2026
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 5622 megabytes
+    Info: Processing ended: Wed Sep 23 12:44:34 2026
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:10
 
 
