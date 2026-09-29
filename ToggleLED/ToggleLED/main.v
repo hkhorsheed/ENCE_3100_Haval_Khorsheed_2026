@@ -13,7 +13,6 @@ module main(
 
     wire [7:0] A;
 
-    // Store SW[7:0] into A when KEY1 is clocked
     Register8 REG0(
         .Clk(KEY[1]),
         .Reset_n(KEY[0]),
@@ -21,7 +20,6 @@ module main(
         .Q(A)
     );
 
-    // Current value B = switches
     Seg7_Display B_LOW(
         .bin_number(SW[3:0]),
         .seg_display(HEX0)
@@ -32,7 +30,6 @@ module main(
         .seg_display(HEX1)
     );
 
-    // Stored value A
     Seg7_Display A_LOW(
         .bin_number(A[3:0]),
         .seg_display(HEX2)
@@ -43,11 +40,9 @@ module main(
         .seg_display(HEX3)
     );
 
-    // Turn unused displays off
     assign HEX4 = 8'b1111_1111;
     assign HEX5 = 8'b1111_1111;
 
-    // Show stored A on LEDs too
     assign LEDR[7:0] = A;
     assign LEDR[9:8] = 2'b00;
 
