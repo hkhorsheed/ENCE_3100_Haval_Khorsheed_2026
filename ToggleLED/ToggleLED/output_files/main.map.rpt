@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed Sep 23 12:21:17 2026
+Mon Sep 28 22:50:05 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -43,16 +43,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 23 12:21:17 2026          ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 28 22:50:05 2026          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; main                                           ;
 ; Top-level Entity Name              ; main                                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 7                                              ;
-;     Total combinational functions  ; 7                                              ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 106                                            ;
+; Total logic elements               ; 36                                             ;
+;     Total combinational functions  ; 28                                             ;
+;     Dedicated logic registers      ; 8                                              ;
+; Total registers                    ; 8                                              ;
+; Total pins                         ; 70                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -164,56 +164,61 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v         ;         ;
-; Seg7_Display.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/Seg7_Display.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v                   ;         ;
+; Seg7_Display.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/Seg7_Display.v           ;         ;
+; output_files/Register8.v         ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/output_files/Register8.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 7           ;
-;                                             ;             ;
-; Total combinational functions               ; 7           ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 7           ;
-;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 0           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 7           ;
-;     -- arithmetic mode                      ; 0           ;
-;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 106         ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 7           ;
-; Total fan-out                               ; 141         ;
-; Average fan-out                             ; 0.64        ;
-+---------------------------------------------+-------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimated Total logic elements              ; 36                  ;
+;                                             ;                     ;
+; Total combinational functions               ; 28                  ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 28                  ;
+;     -- 3 input functions                    ; 0                   ;
+;     -- <=2 input functions                  ; 0                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 28                  ;
+;     -- arithmetic mode                      ; 0                   ;
+;                                             ;                     ;
+; Total registers                             ; 8                   ;
+;     -- Dedicated logic registers            ; 8                   ;
+;     -- I/O registers                        ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 70                  ;
+;                                             ;                     ;
+; Embedded Multiplier 9-bit elements          ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; Register8:REG0|Q[0] ;
+; Maximum fan-out                             ; 8                   ;
+; Total fan-out                               ; 242                 ;
+; Average fan-out                             ; 1.38                ;
++---------------------------------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name     ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+--------------+--------------+
-; |main                      ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 106  ; 0            ; 0          ; |main                   ; main         ; work         ;
-;    |Seg7_Display:SEG0|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Display:SEG0 ; Seg7_Display ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name       ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
+; |main                      ; 28 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 70   ; 0            ; 0          ; |main                     ; main         ; work         ;
+;    |Register8:REG0|        ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Register8:REG0      ; Register8    ; work         ;
+;    |Seg7_Display:A_HIGH|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Display:A_HIGH ; Seg7_Display ; work         ;
+;    |Seg7_Display:A_LOW|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Display:A_LOW  ; Seg7_Display ; work         ;
+;    |Seg7_Display:B_HIGH|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Display:B_HIGH ; Seg7_Display ; work         ;
+;    |Seg7_Display:B_LOW|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Seg7_Display:B_LOW  ; Seg7_Display ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,10 +227,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -237,15 +242,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 106                         ;
-; cycloneiii_lcell_comb ; 10                          ;
-;     normal            ; 10                          ;
+; boundary_port         ; 70                          ;
+; cycloneiii_ff         ; 8                           ;
+;     CLR               ; 8                           ;
+; cycloneiii_lcell_comb ; 34                          ;
+;     normal            ; 34                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
+;         1 data inputs ; 4                           ;
+;         4 data inputs ; 28                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.29                        ;
+; Average LUT depth     ; 1.38                        ;
 +-----------------------+-----------------------------+
 
 
@@ -264,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Sep 23 12:21:08 2026
+    Info: Processing started: Mon Sep 28 22:49:56 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -272,66 +279,40 @@ Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: main File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seg7_display.v
     Info (12023): Found entity 1: Seg7_Display File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/Seg7_Display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_latch.v
+    Info (12023): Found entity 1: D_latch File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/D_latch.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
+    Info (12023): Found entity 1: D_flipflop File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/D_flipflop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file part4.v
+    Info (12023): Found entity 1: Part4 File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/Part4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/register8.v
+    Info (12023): Found entity 1: Register8 File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/output_files/Register8.v Line: 1
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "LEDR" at main.v(5) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-Warning (10034): Output port "HEX1" at main.v(8) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-Warning (10034): Output port "HEX2" at main.v(9) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-Warning (10034): Output port "HEX3" at main.v(10) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-Warning (10034): Output port "HEX4" at main.v(11) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-Warning (10034): Output port "HEX5" at main.v(13) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-Info (12128): Elaborating entity "Seg7_Display" for hierarchy "Seg7_Display:SEG0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 22
+Info (12128): Elaborating entity "Register8" for hierarchy "Register8:REG0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 22
+Info (12128): Elaborating entity "Seg7_Display" for hierarchy "Seg7_Display:B_LOW" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 28
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 5
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 7
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 11
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
-    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 13
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 4
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 4
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 7
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 8
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 9
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 10
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_Golden_Top was ignored
@@ -545,58 +526,16 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- en
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 44 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 3
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 4
-    Warning (15610): No output dependent on input pin "GPIO[0]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[1]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[2]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[3]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[4]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[5]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[6]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[7]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[8]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[9]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[10]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[11]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[12]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[13]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[14]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[15]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[16]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[17]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[18]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[19]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[20]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[21]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[22]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[23]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[24]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[25]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[26]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[27]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[28]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[29]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[30]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[31]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[32]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[33]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[34]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-    Warning (15610): No output dependent on input pin "GPIO[35]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 6
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 48 input pins
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 2
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/ToggleLED/ToggleLED/main.v Line: 2
+Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 314 warnings
+    Info (21061): Implemented 36 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 237 warnings
     Info: Peak virtual memory: 4753 megabytes
-    Info: Processing ended: Wed Sep 23 12:21:17 2026
+    Info: Processing ended: Mon Sep 28 22:50:05 2026
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:21
 
