@@ -1,0 +1,246 @@
+|main
+MAX10_CLK1_50 => MAX10_CLK1_50.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN2
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+LEDR[0] <= Counter_8bit:counter_0.count
+LEDR[1] <= Counter_8bit:counter_0.count
+LEDR[2] <= Counter_8bit:counter_0.count
+LEDR[3] <= Counter_8bit:counter_0.count
+LEDR[4] <= Counter_8bit:counter_0.count
+LEDR[5] <= Counter_8bit:counter_0.count
+LEDR[6] <= Counter_8bit:counter_0.count
+LEDR[7] <= Counter_8bit:counter_0.count
+LEDR[8] <= Counter_8bit:counter_0.count
+LEDR[9] <= Counter_8bit:counter_0.count
+GPIO[0] <= <GND>
+GPIO[1] <= <GND>
+GPIO[2] <= <GND>
+GPIO[3] <= <GND>
+GPIO[4] <= <GND>
+GPIO[5] <= <GND>
+GPIO[6] <= <GND>
+GPIO[7] <= <GND>
+GPIO[8] <= <GND>
+GPIO[9] <= <GND>
+GPIO[10] <= <GND>
+GPIO[11] <= <GND>
+GPIO[12] <= <GND>
+GPIO[13] <= <GND>
+GPIO[14] <= <GND>
+GPIO[15] <= <GND>
+GPIO[16] <= <GND>
+GPIO[17] <= <GND>
+GPIO[18] <= <GND>
+GPIO[19] <= <GND>
+GPIO[20] <= <GND>
+GPIO[21] <= <GND>
+GPIO[22] <= <GND>
+GPIO[23] <= <GND>
+GPIO[24] <= <GND>
+GPIO[25] <= <GND>
+GPIO[26] <= <GND>
+GPIO[27] <= <GND>
+GPIO[28] <= <GND>
+GPIO[29] <= <GND>
+GPIO[30] <= <GND>
+GPIO[31] <= <GND>
+GPIO[32] <= <GND>
+GPIO[33] <= <GND>
+GPIO[34] <= <GND>
+GPIO[35] <= <GND>
+HEX0[0] <= <GND>
+HEX0[1] <= <GND>
+HEX0[2] <= <GND>
+HEX0[3] <= <GND>
+HEX0[4] <= <GND>
+HEX0[5] <= <GND>
+HEX0[6] <= <GND>
+HEX0[7] <= <GND>
+HEX1[0] <= <GND>
+HEX1[1] <= <GND>
+HEX1[2] <= <GND>
+HEX1[3] <= <GND>
+HEX1[4] <= <GND>
+HEX1[5] <= <GND>
+HEX1[6] <= <GND>
+HEX1[7] <= <GND>
+HEX2[0] <= <GND>
+HEX2[1] <= <GND>
+HEX2[2] <= <GND>
+HEX2[3] <= <GND>
+HEX2[4] <= <GND>
+HEX2[5] <= <GND>
+HEX2[6] <= <GND>
+HEX2[7] <= <GND>
+HEX3[0] <= <GND>
+HEX3[1] <= <GND>
+HEX3[2] <= <GND>
+HEX3[3] <= <GND>
+HEX3[4] <= <GND>
+HEX3[5] <= <GND>
+HEX3[6] <= <GND>
+HEX3[7] <= <GND>
+HEX4[0] <= <GND>
+HEX4[1] <= <GND>
+HEX4[2] <= <GND>
+HEX4[3] <= <GND>
+HEX4[4] <= <GND>
+HEX4[5] <= <GND>
+HEX4[6] <= <GND>
+HEX4[7] <= <GND>
+HEX5[0] <= <GND>
+HEX5[1] <= <GND>
+HEX5[2] <= <GND>
+HEX5[3] <= <GND>
+HEX5[4] <= <GND>
+HEX5[5] <= <GND>
+HEX5[6] <= <GND>
+HEX5[7] <= <GND>
+
+
+|main|Counter_1Hz:Counter_1
+in_clk => count[0].CLK
+in_clk => count[1].CLK
+in_clk => count[2].CLK
+in_clk => count[3].CLK
+in_clk => count[4].CLK
+in_clk => count[5].CLK
+in_clk => count[6].CLK
+in_clk => count[7].CLK
+in_clk => count[8].CLK
+in_clk => count[9].CLK
+in_clk => count[10].CLK
+in_clk => count[11].CLK
+in_clk => count[12].CLK
+in_clk => count[13].CLK
+in_clk => count[14].CLK
+in_clk => count[15].CLK
+in_clk => count[16].CLK
+in_clk => count[17].CLK
+in_clk => count[18].CLK
+in_clk => count[19].CLK
+in_clk => count[20].CLK
+in_clk => count[21].CLK
+in_clk => count[22].CLK
+in_clk => count[23].CLK
+in_clk => count[24].CLK
+in_clk => count[25].CLK
+in_clk => out_clk~reg0.CLK
+clear => out_clk.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+clear => count.OUTPUTSELECT
+out_clk <= out_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0
+ena => ena.IN1
+clk => clk.IN8
+clear => clear.IN8
+count[0] <= TFlipFlop:TFF_0.Qt
+count[1] <= TFlipFlop:TFF_1.Qt
+count[2] <= TFlipFlop:TFF_2.Qt
+count[3] <= TFlipFlop:TFF_3.Qt
+count[4] <= TFlipFlop:TFF_4.Qt
+count[5] <= TFlipFlop:TFF_5.Qt
+count[6] <= TFlipFlop:TFF_6.Qt
+count[7] <= TFlipFlop:TFF_7.Qt
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_0
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_1
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_2
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_3
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_4
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_5
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_6
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|Counter_8bit:counter_0|TFlipFlop:TFF_7
+T => d.IN1
+T => d.IN1
+clk => q.CLK
+clear => q.OUTPUTSELECT
+Qt <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
