@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 10M50DAF484C7G
 set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:30:28  SEPTEMBER 05, 2025"
-set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -50,7 +50,7 @@ set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Altera FPGA (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
@@ -600,9 +600,6 @@ set_location_assignment PIN_AB16 -to GSENSOR_CS_n
 set_location_assignment PIN_Y14 -to GSENSOR_INT1
 set_location_assignment PIN_Y13 -to GSENSOR_INT2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Golden_Top -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE ../../Lab_4/main.v
 set_global_assignment -name VERILOG_FILE ../../Lab_4/TFlipFlop.v
 set_global_assignment -name VERILOG_FILE TFlipFlop.v
@@ -611,4 +608,14 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/qsim/Waveform.vwf
 set_global_assignment -name VERILOG_FILE Counter_1Hz.v
+set_global_assignment -name VERILOG_FILE Seg7_Display.v
+set_global_assignment -name VERILOG_FILE Counter_4bit.v
+set_global_assignment -name VERILOG_FILE Counter_16bit.v
+set_global_assignment -name QIP_FILE Counter_LPM.qip
+set_global_assignment -name VERILOG_FILE Digit_Counter.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE Hello_Scroll.v
+set_global_assignment -name VERILOG_FILE Hello_Display.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

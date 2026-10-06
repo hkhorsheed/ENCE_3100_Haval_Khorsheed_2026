@@ -10,7 +10,7 @@ module TFlipFlop (
 
 	// Edge Trigger Flip Flop
 	always @ (posedge clk) begin 
-		if (clear)
+		if (~clear)
 			q <= 0;
 		else
 			q <= d;

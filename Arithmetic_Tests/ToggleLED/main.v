@@ -25,5 +25,15 @@ module main(
 	
 	assign LEDR[3:0] = Sum;
 	assign LEDR[4] = Cout;
+	
+	//Unsigned/Signed multiplication
+	assign P = A * B;
+	
+	assign LEDR[7:0] = P;
+	
+	//Unsigned/Signed Division
+	assign D = A / B;
+	
+	assign LEDR[7:0] = Div;
 
 endmodule

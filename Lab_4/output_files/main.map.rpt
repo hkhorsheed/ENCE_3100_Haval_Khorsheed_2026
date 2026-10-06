@@ -1,6 +1,6 @@
 Analysis & Synthesis report for main
-Tue Sep 29 11:40:21 2026
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Mon Oct  5 21:44:02 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
 ---------------------
@@ -15,7 +15,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "Counter_8bit:counter_0"
+ 10. Parameter Settings for User Entity Instance: Hello_Display:Display_1
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
@@ -25,43 +25,43 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 29 11:40:21 2026          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                      ; main                                           ;
-; Top-level Entity Name              ; main                                           ;
-; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 51                                             ;
-;     Total combinational functions  ; 51                                             ;
-;     Dedicated logic registers      ; 35                                             ;
-; Total registers                    ; 35                                             ;
-; Total pins                         ; 107                                            ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-; UFM blocks                         ; 0                                              ;
-; ADC blocks                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Oct  5 21:44:02 2026           ;
+; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Revision Name                      ; main                                            ;
+; Top-level Entity Name              ; main                                            ;
+; Family                             ; MAX 10                                          ;
+; Total logic elements               ; 85                                              ;
+;     Total combinational functions  ; 85                                              ;
+;     Dedicated logic registers      ; 31                                              ;
+; Total registers                    ; 31                                              ;
+; Total pins                         ; 67                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
+; UFM blocks                         ; 0                                               ;
+; ADC blocks                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -155,7 +155,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -167,67 +167,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v         ;         ;
-; ../../Lab_4/TFlipFlop.v          ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/TFlipFlop.v    ;         ;
-; Counter_8bit.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_8bit.v ;         ;
-; Counter_1Hz.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_1Hz.v  ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v          ;         ;
+; Counter_1Hz.v                    ; yes             ; User Verilog HDL File  ; C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_1Hz.v   ;         ;
+; Hello_Scroll.v                   ; yes             ; User Verilog HDL File  ; C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Hello_Scroll.v  ;         ;
+; Hello_Display.v                  ; yes             ; User Verilog HDL File  ; C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Hello_Display.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 51                  ;
-;                                             ;                     ;
-; Total combinational functions               ; 51                  ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 16                  ;
-;     -- 3 input functions                    ; 4                   ;
-;     -- <=2 input functions                  ; 31                  ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 26                  ;
-;     -- arithmetic mode                      ; 25                  ;
-;                                             ;                     ;
-; Total registers                             ; 35                  ;
-;     -- Dedicated logic registers            ; 35                  ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 107                 ;
-;                                             ;                     ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
-; Maximum fan-out                             ; 28                  ;
-; Total fan-out                               ; 348                 ;
-; Average fan-out                             ; 1.16                ;
-+---------------------------------------------+---------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimated Total logic elements              ; 85                                ;
+;                                             ;                                   ;
+; Total combinational functions               ; 85                                ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 42                                ;
+;     -- 3 input functions                    ; 13                                ;
+;     -- <=2 input functions                  ; 30                                ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 60                                ;
+;     -- arithmetic mode                      ; 25                                ;
+;                                             ;                                   ;
+; Total registers                             ; 31                                ;
+;     -- Dedicated logic registers            ; 31                                ;
+;     -- I/O registers                        ; 0                                 ;
+;                                             ;                                   ;
+; I/O pins                                    ; 67                                ;
+;                                             ;                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                 ;
+;                                             ;                                   ;
+; Maximum fan-out node                        ; Hello_Scroll:Scroll_1|position[1] ;
+; Maximum fan-out                             ; 42                                ;
+; Total fan-out                               ; 481                               ;
+; Average fan-out                             ; 1.92                              ;
++---------------------------------------------+-----------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                          ; Entity Name  ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+--------------+--------------+
-; |main                       ; 51 (1)              ; 35 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 107  ; 0            ; 0          ; |main                                        ; main         ; work         ;
-;    |Counter_1Hz:Counter_1|  ; 37 (37)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_1Hz:Counter_1                  ; Counter_1Hz  ; work         ;
-;    |Counter_8bit:counter_0| ; 13 (2)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0                 ; Counter_8bit ; work         ;
-;       |TFlipFlop:TFF_0|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_0 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_1|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_1 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_2|     ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_2 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_3|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_3 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_4|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_4 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_5|     ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_5 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_6|     ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_6 ; TFlipFlop    ; work         ;
-;       |TFlipFlop:TFF_7|     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_8bit:counter_0|TFlipFlop:TFF_7 ; TFlipFlop    ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+--------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+---------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name           ; Entity Name   ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+---------------+--------------+
+; |main                        ; 85 (0)              ; 31 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 67   ; 0            ; 0          ; |main                         ; main          ; work         ;
+;    |Counter_1Hz:Counter_1|   ; 37 (37)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Counter_1Hz:Counter_1   ; Counter_1Hz   ; work         ;
+;    |Hello_Display:Display_1| ; 40 (40)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Hello_Display:Display_1 ; Hello_Display ; work         ;
+;    |Hello_Scroll:Scroll_1|   ; 8 (8)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Hello_Scroll:Scroll_1   ; Hello_Scroll  ; work         ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -236,32 +229,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
+; Total registers                              ; 31    ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |main|Counter_1Hz:Counter_1|count[17] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |main|Counter_1Hz:Counter_1|count[5]    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|Hello_Scroll:Scroll_1|position[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Counter_8bit:counter_0"                                                                                                                                                 ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                                ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; count ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Hello_Display:Display_1 ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; BLANK          ; 11111111 ; Unsigned Binary                          ;
+; H              ; 10001001 ; Unsigned Binary                          ;
+; E              ; 10000110 ; Unsigned Binary                          ;
+; L              ; 11000111 ; Unsigned Binary                          ;
+; O              ; 11000000 ; Unsigned Binary                          ;
++----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -269,22 +268,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 107                         ;
-; cycloneiii_ff         ; 35                          ;
+; boundary_port         ; 67                          ;
+; cycloneiii_ff         ; 31                          ;
+;     ENA               ; 4                           ;
 ;     SCLR              ; 26                          ;
-;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 52                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 124                         ;
 ;     arith             ; 25                          ;
 ;         2 data inputs ; 25                          ;
-;     normal            ; 27                          ;
+;     normal            ; 99                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 16                          ;
+;         1 data inputs ; 39                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 42                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.90                        ;
+; Average LUT depth     ; 2.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -293,7 +293,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -302,119 +302,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Sep 29 11:40:12 2026
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Mon Oct  5 21:43:48 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 1
+    Info (12023): Found entity 1: main File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tflipflop.v
-    Info (12023): Found entity 1: TFlipFlop File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/TFlipFlop.v Line: 1
+    Info (12023): Found entity 1: TFlipFlop File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/TFlipFlop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter_8bit.v
-    Info (12023): Found entity 1: Counter_8bit File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_8bit.v Line: 1
+    Info (12023): Found entity 1: Counter_8bit File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_8bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter_1hz.v
-    Info (12023): Found entity 1: Counter_1Hz File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_1Hz.v Line: 1
+    Info (12023): Found entity 1: Counter_1Hz File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_1Hz.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file seg7_display.v
+    Info (12023): Found entity 1: Seg7_Display File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Seg7_Display.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter_4bit.v
+    Info (12023): Found entity 1: Counter_4bit File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter_16bit.v
+    Info (12023): Found entity 1: Counter_16bit File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_16bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter_lpm.v
+    Info (12023): Found entity 1: Counter_LPM File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_LPM.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file digit_counter.v
+    Info (12023): Found entity 1: Digit_Counter File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Digit_Counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hello_scroll.v
+    Info (12023): Found entity 1: Hello_Scroll File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Hello_Scroll.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hello_display.v
+    Info (12023): Found entity 1: Hello_Display File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Hello_Display.v Line: 1
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10034): Output port "GPIO" at main.v(7) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-Warning (10034): Output port "HEX0" at main.v(8) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-Warning (10034): Output port "HEX1" at main.v(9) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-Warning (10034): Output port "HEX2" at main.v(10) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-Warning (10034): Output port "HEX3" at main.v(11) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-Warning (10034): Output port "HEX4" at main.v(12) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-Warning (10034): Output port "HEX5" at main.v(14) has no driver File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-Info (12128): Elaborating entity "Counter_1Hz" for hierarchy "Counter_1Hz:Counter_1" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 33
-Warning (10230): Verilog HDL assignment warning at Counter_1Hz.v(20): truncated value with size 32 to match size of target (26) File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_1Hz.v Line: 20
-Info (12128): Elaborating entity "Counter_8bit" for hierarchy "Counter_8bit:counter_0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 43
-Info (12128): Elaborating entity "TFlipFlop" for hierarchy "Counter_8bit:counter_0|TFlipFlop:TFF_0" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Counter_8bit.v Line: 26
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "Counter_1Hz" for hierarchy "Counter_1Hz:Counter_1" File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 22
+Info (12128): Elaborating entity "Hello_Scroll" for hierarchy "Hello_Scroll:Scroll_1" File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 30
+Info (12128): Elaborating entity "Hello_Display" for hierarchy "Hello_Display:Display_1" File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 43
+Warning (10270): Verilog HDL Case Statement warning at Hello_Display.v(32): incomplete case statement has no default case item File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/Hello_Display.v Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 6
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 6
-    Warning (13410): Pin "GPIO[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[8]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[9]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[10]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[11]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[12]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[13]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[14]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[15]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[16]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[17]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[18]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[19]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[20]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[21]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[22]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[23]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[24]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[25]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[26]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[27]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[28]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[29]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[30]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[31]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[32]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[33]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[34]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "GPIO[35]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX0[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX1[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX2[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 11
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX4[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
-    Warning (13410): Pin "HEX5[7]" is stuck at GND File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 14
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 5
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 6
+    Warning (13410): Pin "HEX3[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 7
+    Warning (13410): Pin "HEX4[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 8
+    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 9
+    Warning (13410): Pin "HEX6[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 10
+    Warning (13410): Pin "HEX7[7]" is stuck at VCC File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10 -entity DE10_LITE_Golden_Top was ignored
@@ -628,25 +556,16 @@ Warning (20013): Ignored 209 assignments for entity "DE10_LITE_Golden_Top" -- en
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 4
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 5
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Lab PC/Desktop/Haval/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 5
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 94 output pins
-    Info (21061): Implemented 51 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 318 warnings
-    Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Tue Sep 29 11:40:21 2026
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Mac/Home/Documents/DU Documentation/Classes/Year 3/Quarter 1/Adv. Digital Design/ENCE_3100_Haval_Khorsheed_2026/Lab_4/main.v Line: 3
+Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 85 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 223 warnings
+    Info: Peak virtual memory: 13248 megabytes
+    Info: Processing ended: Mon Oct  5 21:44:02 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:25
 
 
