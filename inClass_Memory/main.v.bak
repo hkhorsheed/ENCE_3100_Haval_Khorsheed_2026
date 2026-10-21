@@ -1,0 +1,10 @@
+module main(
+	// Pinout Assignment
+	input		[9:0]		SW,
+	output	[9:0]		LEDR
+);
+
+	// Your Code
+	assign LEDR[9:0] = SW[9:0];
+
+endmodule

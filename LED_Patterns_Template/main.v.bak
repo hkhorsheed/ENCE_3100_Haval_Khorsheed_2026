@@ -1,0 +1,22 @@
+module main(
+	// Board I/Os
+	input		MAX10_CLK1_50,
+	input 	[9:0]		SW,
+	output	[9:0]		LEDR,
+	output	[35:0]	GPIO
+);
+
+	wire w_clk = MAX10_CLK1_50;
+
+	wire w_tick;
+	
+	// Patterns
+	Pattern3 #(20) Patt (
+		.clk(w_clk),
+		.rst(SW[9]),
+		.en(SW[8]),
+		.dir(SW[0]),                 
+		.counter(LEDR[9:0])
+	);
+
+endmodule

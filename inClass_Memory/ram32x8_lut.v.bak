@@ -1,0 +1,11 @@
+module ram32x8_lut (
+	input clk,
+	input we,
+	input [4:0] addr,
+	input [7:0] din,
+	output reg [] dout
+);
+
+	//
+
+endmodule
