@@ -1,0 +1,5 @@
+module char2seg(
+	input [7:0] char;
+);
+
+endmodule
