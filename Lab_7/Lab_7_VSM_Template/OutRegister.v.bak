@@ -1,0 +1,18 @@
+
+`default_nettype none
+
+module OutRegister #
+(
+	parameter N = 4
+)
+(
+	input MainClock,
+	input MainReset,
+	input EnableOut,
+	input [N-1:0] IB_BUS,
+	output reg [N-1:0] rOut
+);
+
+endmodule
+
+`default_nettype wire

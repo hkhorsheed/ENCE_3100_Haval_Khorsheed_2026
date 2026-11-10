@@ -1,0 +1,17 @@
+
+`default_nettype none
+
+module ProgramCounter #
+(
+	parameter N = 4
+)
+(
+	input MainClock,
+	input EnableCount,
+	input ClearCounter,
+	output reg [N-1:0] Counter
+);
+
+endmodule
+
+`default_nettype wire

@@ -1,0 +1,21 @@
+# Python environment for the NN Number Recognition GUI.
+#
+#   conda env create -f environment.yml
+#   conda activate nn_fpga
+#
+# Conda installs only Python and pip. Everything else comes from pip, at the versions
+# that were tested with the FPGA design (2026-11-10). Do not install torch with conda:
+# conda's llvm-openmp package can break "import torch" on Windows.
+name: nn_fpga
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - torch==2.15.0+cpu
+      - numpy==2.4.6
+      - PySide6==6.12.0
+      - pyserial==3.5
+      - pillow==13.0.0

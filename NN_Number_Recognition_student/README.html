@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NN Number Recognition</title>
+<!-- Same directions as README.md. If you change one, change the other. -->
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --ink: #1d2330; --muted: #5c6577; --line: #d5dae3;
+  --accent: #1f6feb; --accent-soft: #dbe8ff; --warn: #b54708; --warn-soft: #fff1e0;
+  --code-bg: #eef1f5; --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151b; --panel: #1b2029; --ink: #e6e9ef; --muted: #98a2b3; --line: #2f3746;
+    --accent: #5b9dff; --accent-soft: #1d3150; --warn: #ffb066; --warn-soft: #3d2a16; --code-bg: #232a35;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 880px; margin: 0 auto; padding: 28px 16px 60px; }
+h1 { font-size: 30px; margin: 0 0 6px; }
+.lead { color: var(--muted); margin: 0 0 22px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+.card h2 { display: flex; align-items: center; gap: 12px; font-size: 20px; margin: 0 0 12px; }
+.num { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%;
+       background: var(--accent); color: #fff; font-size: 16px; flex: none; }
+h3 { font-size: 16px; margin: 18px 0 8px; }
+ol, ul { padding-left: 22px; margin: 8px 0; }
+li { margin: 6px 0; }
+code { font-family: var(--mono); font-size: 14px; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+.cmd { position: relative; background: var(--code-bg); border-radius: 8px; padding: 10px 70px 10px 14px; margin: 8px 0;
+       font-family: var(--mono); font-size: 14px; white-space: pre; overflow-x: auto; }
+.cmd button { position: absolute; top: 7px; right: 7px; font: inherit; font-size: 12px; padding: 3px 9px; border-radius: 6px;
+              border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+.note { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
+.warn { border-left: 4px solid var(--warn); background: var(--warn-soft); padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
+.need { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.need div { background: var(--code-bg); border-radius: 8px; padding: 10px 12px; font-size: 15px; }
+.seg { font-family: var(--mono); font-weight: 700; }
+svg { width: 100%; max-width: 620px; height: auto; display: block; margin: 8px 0; }
+svg text { fill: var(--ink); font-family: system-ui, "Segoe UI", sans-serif; }
+.ok { color: #1a7f37; font-weight: 700; }
+@media (prefers-color-scheme: dark) { .ok { color: #4cc26a; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>NN Number Recognition on the DE10-Lite</h1>
+  <p class="lead">You draw a digit on the PC. The PC sends the image to the FPGA over UART, 30 times each second. A neural network on the FPGA recognizes the digit and shows it on HEX0. The PC also shows what PyTorch and the FPGA calculated.</p>
+
+  <div class="card">
+    <h2>What you need</h2>
+    <div class="need">
+      <div>DE10-Lite board with its USB cable</div>
+      <div>USB-serial adapter set to <b>3.3 V</b>, and 3 jumper wires</div>
+      <div>Quartus Prime Lite (the version used in class) with MAX 10 support</div>
+      <div>Miniconda</div>
+    </div>
+  </div>
+
+  <!-- 0 -->
+  <div class="card">
+    <h2><span class="num">0</span>Extract the zip file</h2>
+    <ol>
+      <li>Right-click <code>NN_Number_Recognition_student.zip</code> and select <b>Extract All</b>. Do not work inside the zip file: Quartus and Python cannot use files there.</li>
+      <li>Extract it to a short path with no spaces, for example <code>C:\FPGA\NN_Number_Recognition_student</code>.</li>
+    </ol>
+    <div class="warn">Do not use a OneDrive folder (for example "Documents" or "Desktop" when OneDrive is on). OneDrive can lock files while Quartus compiles.</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="card">
+    <h2><span class="num">1</span>Install the Python environment</h2>
+    <ol>
+      <li>Install Miniconda: <a href="https://www.anaconda.com/docs/getting-started/miniconda/install">anaconda.com/docs/getting-started/miniconda/install</a>. On that page, select <b>Windows</b> and the graphical installer, and use the default settings.</li>
+      <li>Open <b>Anaconda Prompt</b> (Windows Start menu).</li>
+      <li>Go to this folder and create the environment. The download is about 300 MB.
+        <div class="cmd">cd C:\FPGA\NN_Number_Recognition_student
+conda env create -f environment.yml</div>
+        Use the folder where you extracted the zip file.</li>
+      <li>Activate the environment. Do this each time you open a new Anaconda Prompt.
+        <div class="cmd">conda activate nn_fpga</div></li>
+    </ol>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <h2><span class="num">2</span>Compile and program the FPGA</h2>
+    <ol>
+      <li>In Quartus, open <code>quartus\nn_number_recognition.qpf</code>.</li>
+      <li>Click <b>Processing → Start Compilation</b>. This takes a few minutes.</li>
+      <li>Click <b>Tools → Programmer</b>. Select <code>output_files\nn_number_recognition.sof</code>, then click <b>Start</b>.</li>
+      <li>HEX0 shows <span class="seg">-</span>. This means "no weights yet". This is correct.</li>
+    </ol>
+    <div class="note">Keep the <code>verilog</code> and <code>quartus</code> folders side by side. The project finds the Verilog files at <code>..\verilog</code>.</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <h2><span class="num">3</span>Connect the USB-serial adapter</h2>
+    <svg viewBox="0 0 620 210" role="img" aria-label="Wiring: adapter TX to GPIO 35, adapter RX to GPIO 33, GND to GND">
+      <rect x="10" y="20" width="170" height="170" rx="10" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--muted)"/>
+      <text x="95" y="48" text-anchor="middle" font-weight="700">USB-serial</text>
+      <text x="95" y="68" text-anchor="middle" font-size="13" style="fill:var(--muted)">adapter, 3.3 V</text>
+      <text x="168" y="104" text-anchor="end" font-weight="600">TX</text>
+      <text x="168" y="139" text-anchor="end" font-weight="600">RX</text>
+      <text x="168" y="174" text-anchor="end" font-weight="600">GND</text>
+      <rect x="440" y="20" width="170" height="170" rx="10" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--muted)"/>
+      <text x="525" y="48" text-anchor="middle" font-weight="700">DE10-Lite</text>
+      <text x="525" y="68" text-anchor="middle" font-size="13" style="fill:var(--muted)">GPIO header</text>
+      <text x="452" y="104" font-weight="600">GPIO[35]</text>
+      <text x="452" y="139" font-weight="600">GPIO[33]</text>
+      <text x="452" y="174" font-weight="600">GND</text>
+      <path d="M180,99 L440,99" stroke="#d9480f" stroke-width="4"/>
+      <path d="M180,134 L440,134" stroke="#1f6feb" stroke-width="4"/>
+      <path d="M180,169 L440,169" stroke="#6b7280" stroke-width="4"/>
+      <text x="310" y="92" text-anchor="middle" font-size="13">PC → FPGA (pin AA2)</text>
+      <text x="310" y="127" text-anchor="middle" font-size="13">FPGA → PC (pin Y3)</text>
+      <text x="310" y="162" text-anchor="middle" font-size="13">ground</text>
+    </svg>
+    <table>
+      <tr><th>Adapter</th><th>DE10-Lite</th></tr>
+      <tr><td>TX</td><td><code>GPIO[35]</code> (pin AA2)</td></tr>
+      <tr><td>RX</td><td><code>GPIO[33]</code> (pin Y3)</td></tr>
+      <tr><td>GND</td><td>GND</td></tr>
+    </table>
+    <div class="warn">Set the adapter to 3.3 V. Do not connect its 5 V or VCC pin.</div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <h2><span class="num">4</span>Run the GUI</h2>
+    <div class="cmd">cd python
+python gui.py</div>
+    <ol>
+      <li>Select the COM port of your adapter. Keep the baud rate at <b>921600</b> and the frame rate at <b>30 Hz</b>.</li>
+      <li>Click <b>Connect</b>. The GUI uploads the weights. The board shows <span class="seg">427b</span> for 3 seconds, and the GUI shows "Ready".</li>
+      <li>Draw a digit with the left mouse button. Erase with the right button.</li>
+    </ol>
+    <h3>The window shows three results</h3>
+    <table>
+      <tr><th>Row</th><th>Where it is calculated</th></tr>
+      <tr><td>PyTorch float</td><td>On the PC, with floating-point numbers</td></tr>
+      <tr><td>Integer model</td><td>On the PC, with the same integer arithmetic as the FPGA</td></tr>
+      <tr><td>FPGA</td><td>On the board. A <span class="ok">✓</span> means that it is exactly the same as the integer model.</td></tr>
+    </table>
+    <div class="note"><b>Try this:</b> switch <b>Center</b> off, and draw a small digit in a corner. See what happens to the result, and think about why.</div>
+  </div>
+
+  <div class="card">
+    <h2>Board display</h2>
+    <table>
+      <tr><th>Display</th><th>Meaning</th></tr>
+      <tr><td class="seg">-</td><td>No weights, or an empty canvas</td></tr>
+      <tr><td><span class="seg">P</span> + LED bar</td><td>Weight upload in progress</td></tr>
+      <tr><td class="seg">427b</td><td>Upload OK (the weight checksum)</td></tr>
+      <tr><td class="seg">Err 3</td><td>Upload failed (1 = wrong model, 2 = wrong length, 3 = wrong checksum, 4 = timeout)</td></tr>
+      <tr><td>digit</td><td>The digit that the FPGA recognized. <code>LEDR[0]</code> flashes for each result.</td></tr>
+    </table>
+    <p><code>KEY[0]</code> resets the FPGA. After a reset, click <b>Disconnect</b> and <b>Connect</b> again.</p>
+  </div>
+
+  <div class="card">
+    <h2>If it does not work</h2>
+    <table>
+      <tr><th>Problem</th><th>What to do</th></tr>
+      <tr><td>"No identify from the FPGA"</td><td>Check the COM port, TX/RX (they cross), and GND. Push <code>KEY[0]</code>.</td></tr>
+      <tr><td>No COM port in the list</td><td>Install the driver of your adapter, then click <b>Refresh</b>.</td></tr>
+      <tr><td><code>conda</code> is not found</td><td>Use <b>Anaconda Prompt</b>, not the normal Command Prompt.</td></tr>
+      <tr><td><code>ModuleNotFoundError</code></td><td>Run <code>conda activate nn_fpga</code> first.</td></tr>
+      <tr><td><span style="color:#d9480f">✗</span> in the FPGA row</td><td>Push <code>KEY[0]</code>, then click <b>Disconnect</b> and <b>Connect</b>.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Files</h2>
+    <table>
+      <tr><th>Folder</th><th>Content</th></tr>
+      <tr><td><code>python/</code></td><td>The GUI, the UART protocol, the image preprocessing, and the PyTorch model with its integer copy</td></tr>
+      <tr><td><code>python/checkpoints/</code></td><td>Trained PyTorch weights (float)</td></tr>
+      <tr><td><code>generated/</code></td><td>The int8 weights that the GUI sends to the FPGA (25,496 bytes)</td></tr>
+      <tr><td><code>verilog/</code></td><td>The FPGA design: NN core, UART, protocol, 7-segment display</td></tr>
+      <tr><td><code>quartus/</code></td><td>The Quartus project for the DE10-Lite</td></tr>
+    </table>
+  </div>
+</main>
+<script>
+// "Copy" button on each command box
+document.querySelectorAll(".cmd").forEach((box) => {
+  const text = box.textContent;
+  const b = document.createElement("button");
+  b.textContent = "Copy";
+  b.onclick = () => {
+    navigator.clipboard.writeText(text).then(() => { b.textContent = "Copied"; setTimeout(() => (b.textContent = "Copy"), 1200); },
+                                               () => { b.textContent = "Select and copy"; });
+  };
+  box.appendChild(b);
+});
+</script>
+</body>
+</html>
